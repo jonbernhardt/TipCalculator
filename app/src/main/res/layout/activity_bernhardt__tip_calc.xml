@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginStart="5dp"
+    android:orientation="vertical"
+    tools:context="bernhardt.tipcalculator.Bernhardt_TipCalc">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Bill Amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/tvPeopleNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number of People"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"/>
+
+    <RadioGroup
+        android:id="@+id/rbgPeople"
+        android:layout_width="match_parent"
+        android:layout_height="125dp">
+
+        <RadioButton
+            android:id="@+id/rbOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:duplicateParentState="false"
+            android:text="1 - One"/>
+
+        <RadioButton
+            android:id="@+id/rbTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 - Two"/>
+
+        <RadioButton
+            android:id="@+id/rbThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 - Three"/>
+
+        <RadioButton
+            android:id="@+id/rbFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 - Four"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Outstanding Service"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="buttonCalcClick"
+        android:text="Calculate Tip"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Tip:"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+    <TextView
+        android:id="@+id/tvTotalTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Per Person:"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+    <TextView
+        android:id="@+id/tvTipPer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+</LinearLayout>
